@@ -51,10 +51,7 @@ const Stepfour = () => {
         <span>+$120/yr</span>
       </div>
 
-      <div>
-        <button>Go Back</button>
-        <button>Confirm</button>
-      </div>
+      
     </div>
   );
 };

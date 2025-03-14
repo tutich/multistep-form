@@ -76,10 +76,7 @@ const Stepthree = () => {
         </div>
       </div>
 
-      <div>
-        <button>Go Back</button>
-        <button>Next Step</button>
-      </div>
+     
     </div>
   );
 };

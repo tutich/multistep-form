@@ -21,9 +21,7 @@ const Stepone = () => {
         </div>
       </div>
 
-      <div>
-        <button>Next Step</button>
-      </div>
+      
     </div>
   );
 };

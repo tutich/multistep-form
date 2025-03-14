@@ -1,7 +1,7 @@
 import React from "react";
 import arcade from "../assets/icon-arcade.svg";
 import advanced from "../assets/icon-advanced.svg";
-import arcade from "../assets/icon-arcade.svg";
+import pro from "../assets/icon-pro.svg";
 
 const Steptwo = () => {
   return (
@@ -53,10 +53,7 @@ const Steptwo = () => {
         <button>monthly <span></span> yearly</button>
       </div>
 
-      <div>
-        <button>Go Back</button>
-        <button>Next Step</button>
-      </div>
+      
     </div>
   );
 };
