@@ -32,8 +32,14 @@ const sideItems = [
 
 const Home = () => {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({})
 
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
+
+  const handleStepNext = (data) => {
+    setFormData((prev) => ({...prev, ...data}));
+    setStep(2);
+  }
 
   const nextStep = () => setStep((prev) => Math.min(prev + 1, 5));
 
@@ -102,7 +108,7 @@ const Home = () => {
         {/* steps */}
         <div className="flex flex-col justify-between py-8 h-full">
           <div className="flex-grow">
-            {step === 1 && <Stepone />}
+            {step === 1 && <Stepone onNext={handleStepNext}/>}
             {step === 2 && <Steptwo />}
             {step === 3 && <Stepthree />}
             {step === 4 && <Stepfour />}
@@ -111,11 +117,11 @@ const Home = () => {
           {step < 5 && (
             <div className={`flex mt-8 ${step > 1 ? "justify-between" : "justify-end"}`} >
               {step > 1 && <button onClick={prevStep} className="text-right text-white text-sm p-2 rounded-md h-7 w-20 flex items-center justify-center bg-marineBlue">Go back</button>}
-              {step < 4 ? (
+              {/* {step < 4 ? (
                 <button onClick={nextStep} className="text-right text-white text-sm p-2 rounded-md h-7 w-20 flex items-center justify-center bg-marineBlue">Next Step</button>
               ) : (
                 <button onClick={nextStep} className="text-right text-white text-sm p-2 rounded-md h-7 w-20 flex items-center justify-center bg-marineBlue">confirm</button>
-              )}
+              )} */}
             </div>
           )}
         </div>
